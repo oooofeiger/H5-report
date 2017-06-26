@@ -1,0 +1,54 @@
+.h5_component_bar_v{
+}
+.h5_component_bar_v .line{
+	float: left;
+    width: 50px;
+    height: 100%;
+    font-size: 12px;
+    line-height: 15px;
+    margin-bottom: 15px;
+    transform:rotate(180deg);
+}
+.h5_component_bar_v .name{
+	transform:rotate(180deg);
+	width: 50px;
+	float: left;
+	color: #000;
+	text-align: center;
+	font-size:12px;
+}
+.h5_component_bar_v .rate_{
+	width: 50px;
+    float: left;
+    position: relative;
+}
+.h5_component_bar_v .rate_ .bg{
+	border-radius: 2px;
+	background-color: #99c0ff;
+	width: 20px;
+	height: 0;
+	margin: 0 auto;
+}
+.h5_component_bar_v .per{
+	transform:rotate(180deg);
+	width: 50px;
+	color: #990cff;
+	float: left;
+	opacity: 0;
+	text-align:center;
+}
+.h5_component_bar_v_load .rate_ .bg{
+	transition: all 1s .5s;
+	height: 100%;
+}
+.h5_component_bar_v_leave .rate_ .bg{
+	height: 0;
+}
+.h5_component_bar_v_load .per{
+	transition: all 1s 1.5s;
+	opacity: 1;
+}
+.h5_component_bar_v_leave .per{
+	opacity: 0;
+}
+	

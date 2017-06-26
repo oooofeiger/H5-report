@@ -1,0 +1,12 @@
+.h5_component_radar{}
+.h5_component_radar canvas{
+	position: absolute;
+	left: 0;
+	top: 0;  /* 用canvas做动画，会进行分层，要用到z-index，所以需要事先绝对定位*/
+	width: 100%;
+	height: 100%;
+}
+.h5_component_radar .text_radar{
+	position: absolute;
+	transition:all 1s;
+}

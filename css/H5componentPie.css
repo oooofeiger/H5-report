@@ -1,0 +1,15 @@
+.h5_component_pie{}
+.h5_component_pie canvas{
+	position: absolute;
+	left: 0;
+	top: 0;  /* 用canvas做动画，会进行分层，要用到z-index，所以需要事先绝对定位*/
+	width: 100%;
+	height: 100%;
+}
+.h5_component_pie .text_pie{
+	position: absolute;
+	height: 24px;
+	text-align: center;
+	z-index: 99;
+	transition:all 1s;
+}

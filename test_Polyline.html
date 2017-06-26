@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>test-componentBase</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+	<link rel="stylesheet" href="css/H5.css">
+	<link rel="stylesheet" href="css/H5ComponentBase.css">
+	<link rel="stylesheet" href="css/H5ComponentPolyline.css">
+
+	<style>
+		body{
+			margin:0;
+			padding:0;
+			font-size:12px;
+		}
+		.iphone{
+			width:340px;
+			height:540px;
+			background:#fff;
+			position: absolute;
+			left:50%;
+			top:50%;
+			margin:-270px 0 0 -170px;
+		}
+	</style>
+</head>
+<body>
+	<div class="iphone"></div>
+
+	<script src="js/lib/jquery.js"></script>
+	<script src="js/lib/jquery-ui.min.js"></script>
+	<script src="js/lib/jquery.fullPage.js"></script>
+	<script src="js/H5.js"></script>
+	<script src="js/H5ComponentBase.js"></script>
+	<script src="js/H5ComponentPolyline.js"></script>
+	
+	<script>
+		var cfg = {
+			type : 'polyline',
+			width: 530,
+			height: 600,
+			css: {
+				top:100,
+				opacity: 0
+			},
+			animateIn:{top:50,opacity:1},
+			animateOut: {top:100, opacity:0},
+			center: true,
+			data: [
+				['JS', .27 , '#ff7676'],
+				['PHP', .15],
+				['CSS3', .2],
+				['HTML5', .12],
+				['jQuery', .35]
+			]
+		}
+
+		var h5 = new H5ComponentPolyline('name', cfg);
+		$('.iphone').append(h5);
+
+		var leave = true;
+		$('body').click(function(){
+			leave = !leave;
+			$('.h5_component').trigger(leave?'onLeave': 'onLoad');
+		})
+
+
+
+
+
+
+
+
+
+
+
+		// h5.addPage('首页','首页内容')
+		//       .addComponent('logo',{
+		//       	text:'logo',
+		//       	css: {opacity:0},
+		//       	animateIn: {opacity:1},
+		//       	animateOut: {opacity: 0}
+		//       })
+		//   .addPage('第二页','第二页内容')
+		//   .addPage('第三页','第三页内容')
+		//   .loader()
+	</script>
+</body>
+</html>
