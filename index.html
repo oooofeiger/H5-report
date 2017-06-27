@@ -69,7 +69,7 @@
 			html.push('<script src="/H5-report/js/H5Component'+res[s]+'.js"><\/script>');
 			html.push('<link rel="stylesheet" href="/H5-report/css/H5Component'+res[s]+'.css">')
 		}
-		document.write(html.join(''));
+		$('body').append(html.join(''));
 	</script>
 	<script src="/H5-report/js/H5.js"></script>
 	<script>
