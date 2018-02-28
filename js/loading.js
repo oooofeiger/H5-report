@@ -1,4 +1,5 @@
 var H5_loading = function(imgs,page){
+	console.log(222222222222222)
 	var id = this.id;
 	if(this._images === undefined){   //第一次进入
 		this._images = (imgs || []).length;

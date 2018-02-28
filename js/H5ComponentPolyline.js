@@ -36,7 +36,6 @@ var H5ComponentPolyline = function(name, cfg){
 			text_polyline.text(cfg.data[i][0]);
 			text_polyline.css('width',text_w/2).css('left',(x/2-text_w/4)+text_w/2);
 			component.append(text_polyline);
-			console.log((x/2-text_w/4)+text_w/2)
 		}
 	}
 

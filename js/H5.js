@@ -65,7 +65,7 @@ var H5 = function(){
 		return this;
 	}
 
-	this.loader = function(imgs,page){
+	this.loader = function(page){
 		this.el.fullpage({
 			onLeave: function(index, nextIndex, direction){
 				$(this).find('.h5_component').trigger('onLeave');
@@ -80,7 +80,7 @@ var H5 = function(){
 		if(page){
 			$.fn.fullpage.moveTo(page);//直接切换到指定页
 		}
-		this.loader = typeof H5_loading==='function' ? H5_loading : this.loader;
+		this.loader = typeof H5_loading=='function' ? H5_loading : this.loader;
 	}
 	return this;
 }
